@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h3>This is home page</h3>
+
+    {% if perms.user.delete_user %}
+        {{ user }}
+        <p>user has perm to view user</p>
+    {% else %}
+        <p>use don't have permission to add user</p>
+    {% endif %}
+</body>
+</html>

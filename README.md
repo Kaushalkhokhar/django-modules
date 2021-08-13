@@ -30,5 +30,34 @@
         - i.e update_session_auth_hash(request, form.user)
     - changing a password with and without old password
 
+### Group
+    - custom user model with permissionsmixin
+        - allows to create groups and permissions
+    - admin pannel with groups model
+    - add specific permission to the group
+    - assigning group to user when it registers first time
+    - check permisson in python and templates
+        - python: if request.user.has_perm('user.delete_user')
+        - template: perms.user.delete_user
+
+### CookSess
+    - cookies
+        - get, set, delete method of normal cookies
+        - with expire and age params
+        - signed cookies with salt
+    - Session
+        - session uses database to store session
+        - so need to add migrations
+        - it stores session id as cookies in client side
+        - default expiration is of 15 days
+        - session can be stored in db/file/cache etc...
+
+        
+##### Link to know more about session
+    - https://docs.djangoproject.com/en/3.2/topics/http/sessions/
+    
+
+
+
     
 
