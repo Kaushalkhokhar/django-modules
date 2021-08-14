@@ -86,6 +86,15 @@
     - select storage system like database, file or memory etc
     - per-view cache is generated on url-basis means if two url will have a same view function then two differenct cache will be generated...
 
+### LoginCount
+    - counts how many time user loggedin?
+    - uses low level cahe api for that
+
+### Middleware
+    - is pligged in type system
+    - can be fucntion or class based view
+
+
 ### Some important commands
     - to get IP of user
         - request.META.get('REMOTE_ADDR)
