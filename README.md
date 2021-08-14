@@ -51,12 +51,50 @@
         - it stores session id as cookies in client side
         - default expiration is of 15 days
         - session can be stored in db/file/cache etc...
-
-        
+   
 ##### Link to know more about session
     - https://docs.djangoproject.com/en/3.2/topics/http/sessions/
-    
 
+
+### Signals
+    - all built_in_signals are created in signal.py file
+    - need to add ready method in apps.py and default_app_congfig in __init__.py
+    - check extra args of that signal using the kwargs
+
+
+### Profile
+    - profile created on post_save signal
+    - so it will not ceate profile for superuser
+    - don't forget to pass *args, **kwargs to save method of profile model
+    - need to add following in settings.py
+        - MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # is location where we uploaded a file system
+        - MEDIA_URL = '/media/' # public url of Media_root directory
+    - need to add following in urls.py for loading image in tempalates
+        - if settings.DEBUG: 
+            - urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    - need to add following in template to rener image
+        - <img src="{{ user.profile.img.url }}">
+        - here img is name given to image field in profile model
+    - userform and profile form can be different to update user and profile
+    - by default django cares of changing the iamge name if it is already in assigned path. so every user will have different image and it's own
+
+### PageCount
+    - increases count on each request of that page
+
+### Cache
+    - to cahce entire site we need to add two line in middlewere
+    - select storage system like database, file or memory etc
+    - per-view cache is generated on url-basis means if two url will have a same view function then two differenct cache will be generated...
+
+### Some important commands
+    - to get IP of user
+        - request.META.get('REMOTE_ADDR)
+            - we can get it on user_logged_in signal
+            - after getting we can stor it on session
+
+    
+            
+    
 
 
     

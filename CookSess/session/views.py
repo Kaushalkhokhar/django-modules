@@ -4,7 +4,7 @@ from django.shortcuts import render, resolve_url
 def set(request):
     request.session['user'] = 'kush'
     request.session['account'] = 'demo'
-    request.session.set_expiry(10) 
+    # request.session.set_expiry(10) 
     # expiry can be different value. To know more read 
     # documetaion in link given in README.md
     return render(request, 'session/home.html')
