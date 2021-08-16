@@ -95,6 +95,33 @@
     - can be fucntion or class based view
 
 
+### Queryset
+    - different methods
+    - difference between returning queryset and objet
+    - Lookup methods
+    - aggragation
+    - Q objects
+    - Limiting Queryset
+
+### Model Inheritance
+    - abstract base class
+        - used to write commom class
+        - tabls is not created
+    - multitable inheritance
+        - automatic onetoone field between base and child class
+        - when child objects created, automatically parent objects created
+    - proxy models
+        - use to change python behaviour of a model
+        - use to change the default manager or add a new method to base model
+
+
+
+### Modules to make
+    - Change password link
+    - Third party sign-in
+    - third party payment integration
+
+
 ### Some important commands
     - to get IP of user
         - request.META.get('REMOTE_ADDR)
