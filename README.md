@@ -111,10 +111,24 @@
         - automatic onetoone field between base and child class
         - when child objects created, automatically parent objects created
     - proxy models
+        - it want have any extra field than the base model
         - use to change python behaviour of a model
         - use to change the default manager or add a new method to base model
 
+### Model Manager
+    - to override or add extra methods of manager class
+    - we can change the manage behaviour and also add some more methods to it
 
+
+### Model Relationship
+    - OneToOne
+        - creates a id column associated with related field
+    - ManyToOne(Foreignkey)
+        - creates a id colimn associated with related field
+    - ManyToMany
+        - creates a table to define relation between two table
+
+    - see in views.py file how to query on related models
 
 ### Modules to make
     - Change password link
