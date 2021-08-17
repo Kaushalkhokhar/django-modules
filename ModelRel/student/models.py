@@ -19,9 +19,6 @@ class StudentResult(models.Model):
     # here, protect will not allow to delete student before deleting the result associated with that students
     # means, we need to first delete the result of that student then we can delete the studen
 
-    def choices():
-        pass
-        
     # student = models.OneToOneField(Student, on_delete=models.PROTECT, primary_key=True,
     #                                         limit_choices_to={'name__contains': 'a'})
                                             # here we have limited the user can create result table
@@ -47,7 +44,7 @@ Part 2 ManyToOne Relationships
 
 class Subject(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    
+
     # student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='sub') 
     # here, related_name is used when we use filter on subject model
 
