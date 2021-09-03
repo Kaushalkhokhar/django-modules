@@ -103,7 +103,7 @@
     - Q objects
     - Limiting Queryset
 
-### Model Inheritance
+### Model Inheritance(ModelInh)
     - abstract base class
         - used to write commom class
         - tabls is not created
@@ -115,12 +115,12 @@
         - use to change python behaviour of a model
         - use to change the default manager or add a new method to base model
 
-### Model Manager
+### Model Manager(ModelManager)
     - to override or add extra methods of manager class
     - we can change the manage behaviour and also add some more methods to it
 
 
-### Model Relationship
+### Model Relationship(MOdelRel)
     - OneToOne
         - creates a id column associated with related field
     - ManyToOne(Foreignkey)
@@ -130,17 +130,29 @@
 
     - see in views.py file how to query on related models
 
+### Class View
+    - some basic class based views defined
+    - not complete
+
 ### Modules to make
     - Change password link
     - Third party sign-in
     - third party payment integration
-
 
 ### Some important commands
     - to get IP of user
         - request.META.get('REMOTE_ADDR)
             - we can get it on user_logged_in signal
             - after getting we can stor it on session
+
+    - class based view
+        - view
+            - from django.views import View
+            - class Home(View):
+                - def get(self, request):
+                    - pass
+
+            
 
     
             
